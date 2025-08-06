@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Foundation\Application;
+use App\Http\Controllers\PostsController;
+use App\Http\Controllers\PagesController;
 use Illuminate\Http\Request;
 
 define('LARAVEL_START', microtime(true));

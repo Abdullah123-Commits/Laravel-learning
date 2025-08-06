@@ -12,8 +12,14 @@ use App\Http\Controllers\PostsController;
 // BEFORE BREEZE COMMIT THINGS RE PASTED FORM GITHUB REPO
 Route::get('/', [PagesController::class, 'index']);
 Route::get('/about', [PagesController::class, 'about']);
-Route::get('/services', [PagesController::class, 'services']);
-Route::resource('posts', PostsController::class);
+Route::get('/services', [PagesController::class, 'services']);// no auth here
+
+// Route::resource('posts', PostsController::class);// in this line no authentication
+// ADDING AUTHENTICATION TO RESOURCE ROUTES OF POST
+Route::middleware(['auth'])->group(function () {
+    Route::resource('posts', PostsController::class);
+});
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
