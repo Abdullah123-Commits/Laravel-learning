@@ -1,36 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">{{config('app.name', 'LSAPP')}}</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            <li>
-                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" href="/about">About Us</a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" href="/services">Services</a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" href="/posts">Blog</a>
-            </li>
-        </ul>
-
-        <ul class="navbar-nav ms-auto">
-            <li><a href="/posts/create">Create Post</a></li>
-        </ul>
-    </div>
-</nav>
-
-{{-- breeze made navigation --}}
-{{-- <nav x-data="{ open: false }" class="bg-white dark:bg-gray-800 border-b border-gray-100 dark:border-gray-200">
+<nav x-data="{ open: false }" class="bg-white dark:bg-gray-800 border-b border-gray-100 dark:border-gray-700">
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
@@ -48,9 +16,9 @@
                         {{ __('Dashboard') }}
                     </x-nav-link>
                 </div>
-            </div> --}}
+            </div>
 
-            {{-- <!-- Settings Dropdown -->
+            <!-- Settings Dropdown -->
             <div class="hidden sm:flex sm:items-center sm:ms-6">
                 <x-dropdown align="right" width="48">
                     <x-slot name="trigger">
@@ -82,9 +50,9 @@
                         </form>
                     </x-slot>
                 </x-dropdown>
-            </div> --}}
+            </div>
 
-            {{-- <!-- Hamburger -->
+            <!-- Hamburger -->
             <div class="-me-2 flex items-center sm:hidden">
                 <button @click="open = ! open" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 dark:text-gray-500 hover:text-gray-500 dark:hover:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-900 focus:outline-none focus:bg-gray-100 dark:focus:bg-gray-900 focus:text-gray-500 dark:focus:text-gray-400 transition duration-150 ease-in-out">
                     <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
@@ -94,10 +62,10 @@
                 </button>
             </div>
         </div>
-    </div> --}}
+    </div>
 
     <!-- Responsive Navigation Menu -->
-    {{-- <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
+    <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
         <div class="pt-2 pb-3 space-y-1">
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
@@ -128,5 +96,5 @@
                 </form>
             </div>
         </div>
-    </div> --}}
-{{-- </nav> --}}
+    </div>
+</nav>
